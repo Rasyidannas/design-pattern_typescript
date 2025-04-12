@@ -1,6 +1,7 @@
 "use strict";
-function foo(bar) {
-    return 'Hello, ' + bar;
-}
-let baz = 'ABC';
-console.log(foo(baz));
+let foo;
+foo = 'ABC';
+foo = '123';
+foo = 'ABC = 123';
+foo = 'quick brown fox, etc';
+foo = "It wasn't me";
