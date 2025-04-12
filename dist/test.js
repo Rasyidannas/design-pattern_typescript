@@ -1,7 +1,7 @@
 "use strict";
 let a;
-a = { 123: 'abc', 456: 'def' };
+a = [1, 'abc'];
 let b;
-b = { abc: true, def: false, ghi: true };
-console.log(a[123]);
-console.log(b['def']);
+b = ['abc', false, 123];
+console.log(a[1]);
+console.log(b[2]);

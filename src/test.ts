@@ -1,7 +1,7 @@
-let a: { [key: number]: string }
-a = { 123: 'abc', 456: 'def' }
-let b: { [key: string]: boolean }
-b = { abc: true, def: false, ghi: true }
+let a: [number, string]
+a = [1, 'abc']
+let b: [string, boolean, number]
+b = ['abc', false, 123]
 
-console.log(a[123])
-console.log(b['def'])
+console.log(a[1])
+console.log(b[2])
