@@ -1,6 +1,14 @@
-let baz: number
-baz = 123 //decimal
-baz = 123.456 //float
-baz = 0xffff //hex
-baz = 0b10101 //binary
-baz = 0o671 //octal
+let a: string[]
+a = ['a', 'b', 'd', 'd']
+let b: number[]
+b = [1, 2, 3, 4]
+let c: boolean[]
+c = [true, false, true]
+let d: unknown[]
+d = [1, 'a', true, ['even', 'another', 'internal', 'array']]
+
+// Array items can be retrieved using a zero based index.
+console.log(a[1])
+console.log(b[0])
+console.log(c[1])
+console.log(d[2])
