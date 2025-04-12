@@ -1,7 +1,10 @@
-let a: [number, string]
-a = [1, 'abc']
-let b: [string, boolean, number]
-b = ['abc', false, 123]
+let a: Set<number>
+a = new Set([1, 2, 3, 4])
+let b: Set<string>
+b = new Set(['a', 'b', 'c', 'd', 'a']) // the second `a` is not added
+let c: Set<unknown>
+c = new Set([1, 'b', true])
 
-console.log(a[1])
-console.log(b[2])
+console.log(a)
+console.log(b)
+console.log(c)

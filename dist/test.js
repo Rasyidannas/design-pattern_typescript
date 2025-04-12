@@ -1,7 +1,10 @@
 "use strict";
 let a;
-a = [1, 'abc'];
+a = new Set([1, 2, 3, 4]);
 let b;
-b = ['abc', false, 123];
-console.log(a[1]);
-console.log(b[2]);
+b = new Set(['a', 'b', 'c', 'd', 'a']); // the second `a` is not added
+let c;
+c = new Set([1, 'b', true]);
+console.log(a);
+console.log(b);
+console.log(c);
