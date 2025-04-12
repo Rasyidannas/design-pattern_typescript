@@ -1,14 +1,7 @@
-let a: string[]
-a = ['a', 'b', 'd', 'd']
-let b: number[]
-b = [1, 2, 3, 4]
-let c: boolean[]
-c = [true, false, true]
-let d: unknown[]
-d = [1, 'a', true, ['even', 'another', 'internal', 'array']]
+let a: { [key: number]: string }
+a = { 123: 'abc', 456: 'def' }
+let b: { [key: string]: boolean }
+b = { abc: true, def: false, ghi: true }
 
-// Array items can be retrieved using a zero based index.
-console.log(a[1])
-console.log(b[0])
-console.log(c[1])
-console.log(d[2])
+console.log(a[123])
+console.log(b['def'])

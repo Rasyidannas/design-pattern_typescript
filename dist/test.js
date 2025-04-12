@@ -1,14 +1,7 @@
 "use strict";
 let a;
-a = ['a', 'b', 'd', 'd'];
+a = { 123: 'abc', 456: 'def' };
 let b;
-b = [1, 2, 3, 4];
-let c;
-c = [true, false, true];
-let d;
-d = [1, 'a', true, ['even', 'another', 'internal', 'array']];
-// Array items can be retrieved using a zero based index.
-console.log(a[1]);
-console.log(b[0]);
-console.log(c[1]);
-console.log(d[2]);
+b = { abc: true, def: false, ghi: true };
+console.log(a[123]);
+console.log(b['def']);
