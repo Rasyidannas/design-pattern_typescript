@@ -1,4 +1,7 @@
 "use strict";
-let bar;
-bar = true;
-bar = false;
+let baz;
+baz = 123; //decimal
+baz = 123.456; //float
+baz = 0xffff; //hex
+baz = 0b10101; //binary
+baz = 0o671; //octal
