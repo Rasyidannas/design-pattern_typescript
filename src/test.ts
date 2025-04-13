@@ -1,8 +1,16 @@
-class Animal {
-    name: string
-    age: number
+abstract class Animal {
+    abstract name: string
+    age = -1
 
+    constructor() {}
+
+    abstract feed(food: string, amount: number): void
+}
+
+class Cat extends Animal {
+    name: string
     constructor(name: string, age: number) {
+        super()
         this.name = name
         this.age = age
     }
@@ -11,9 +19,7 @@ class Animal {
         console.log(
             'Feeding ' +
                 this.name +
-                ' the ' +
-                this.constructor.name +
-                ' ' +
+                ' the Cat ' +
                 amount +
                 ' kg of ' +
                 food
@@ -21,31 +27,27 @@ class Animal {
     }
 }
 
-class Cat extends Animal {
-    isHungry: boolean
-    name = 'Emmy'
-    constructor(name: string, age: number, isHungry: boolean) {
-        super(name, age)
-        this.isHungry = isHungry
+class Dog extends Animal {
+    name: string
+    constructor(name: string, age: number) {
+        super()
+        this.name = name
+        this.age = age
     }
 
     feed(food: string, amount: number): void {
-        if (this.isHungry) {
-            super.feed(food, amount)
-        } else {
-            console.log(
+        console.log(
+            'Feeding ' +
                 this.name +
-                    ' the ' +
-                    this.constructor.name +
-                    ' is not hungry'
-            )
-        }
+                ' the Dog ' +
+                amount +
+                ' kg of ' +
+                food
+        )
     }
 }
 
-class Dog extends Animal {}
-
-const CAT = new Cat('Cosmo', 8, false)
+const CAT = new Cat('Cosmo', 8)
 const DOG = new Dog('Rusty', 12)
 CAT.feed('Fish', 0.1)
 DOG.feed('Beef', 0.25)
