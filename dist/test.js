@@ -1,14 +1,7 @@
 "use strict";
-class Circle {
-    constructor(radius) {
-        this.radius = radius;
-    }
-}
-Circle.PI = 3.14;
-console.log('Circle.PI = ' + Circle.PI);
-const CIRCLE1 = new Circle(1);
-const CIRCLE2 = new Circle(2);
-const CIRCLE3 = new Circle(3);
-console.log('CIRCLE1 Area = ' + Circle.PI * Math.pow(CIRCLE1.radius, 2));
-console.log('CIRCLE2 Area = ' + Circle.PI * Math.pow(CIRCLE2.radius, 2));
-console.log('CIRCLE3 Area = ' + Circle.PI * Math.pow(CIRCLE3.radius, 2));
+Object.defineProperty(exports, "__esModule", { value: true });
+const animals_1 = require("./animals");
+const CAT = new animals_1.Cat('Cosmo', 8);
+console.log(CAT.name);
+const DOG = new animals_1.Dog('Rusty', 12);
+console.log(DOG.name);
