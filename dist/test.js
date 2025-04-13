@@ -1,21 +1,33 @@
 "use strict";
 class Cat {
-    constructor(name) {
-        this.stepsWalked = 0;
+    constructor(name, age) {
         this.name = name;
+        this.age = age;
     }
-    walk(steps) {
-        console.log(this.name + ' the cat has walked ' + steps + ' steps.');
-        this.stepsWalked += steps;
-    }
-    totalStepCount() {
-        return this.stepsWalked;
+    feed(food, amount) {
+        console.log('Feeding ' +
+            this.name +
+            ' the Cat ' +
+            amount +
+            ' kg of ' +
+            food);
     }
 }
-const CAT = new Cat('Cosmo');
-CAT.walk(20);
-CAT.walk(20);
-console.log(CAT.name +
-    ' the cat, has walked a total of ' +
-    CAT.totalStepCount() +
-    ' steps.');
+class Dog {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    feed(food, amount) {
+        console.log('Feeding ' +
+            this.name +
+            ' the Dog ' +
+            amount +
+            ' kg of ' +
+            food);
+    }
+}
+const CAT = new Cat('Cosmo', 8);
+const DOG = new Dog('Rusty', 12);
+CAT.feed('Fish', 0.1);
+DOG.feed('Beef', 0.25);

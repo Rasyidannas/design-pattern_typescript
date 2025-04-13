@@ -1,29 +1,53 @@
-class Cat {
+interface IAnimal {
     name: string
-    stepsWalked: number = 0
+    age: number
 
-    constructor(name: string) {
+    feed(food: string, amount: number): void
+}
+
+class Cat implements IAnimal {
+    name: string
+    age: number
+
+    constructor(name: string, age: number) {
         this.name = name
+        this.age = age
     }
 
-    walk(steps: number): void {
+    feed(food: string, amount: number): void {
         console.log(
-            this.name + ' the cat has walked ' + steps + ' steps.'
+            'Feeding ' +
+                this.name +
+                ' the Cat ' +
+                amount +
+                ' kg of ' +
+                food
         )
-        this.stepsWalked += steps
-    }
-
-    totalStepCount(): number {
-        return this.stepsWalked
     }
 }
 
-const CAT = new Cat('Cosmo')
-CAT.walk(20)
-CAT.walk(20)
-console.log(
-    CAT.name +
-        ' the cat, has walked a total of ' +
-        CAT.totalStepCount() +
-        ' steps.'
-)
+class Dog implements IAnimal {
+    name: string
+    age: number
+
+    constructor(name: string, age: number) {
+        this.name = name
+        this.age = age
+    }
+
+    feed(food: string, amount: number): void {
+        console.log(
+            'Feeding ' +
+                this.name +
+                ' the Dog ' +
+                amount +
+                ' kg of ' +
+                food
+        )
+    }
+}
+
+const CAT = new Cat('Cosmo', 8)
+const DOG = new Dog('Rusty', 12)
+CAT.feed('Fish', 0.1)
+DOG.feed('Beef', 0.25)
