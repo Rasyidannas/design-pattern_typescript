@@ -66,7 +66,7 @@ Also, throughout the book, as each design pattern is discussed and demonstrated 
 So, in the book, you will learn about these 23 Design Patterns, 
 
 * Creational
-    - [Factory](src/factory)
+    - [Factory](src/factory) [node ./dist/factory/client.js]
     - [Abstract Factory](src/abstract-factory)
     - [Builder](src/builder)
     - [Prototype](src/prototype)
