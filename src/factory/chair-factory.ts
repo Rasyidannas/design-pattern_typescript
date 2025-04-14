@@ -4,6 +4,7 @@ import BigChair from './big-chair'
 import IChair from './chair'
 
 export default class ChairFactory {
+    // this is Factory method
     static getChair(chair: string): IChair {
         if (chair == 'BigChair') {
             return new BigChair()

@@ -4,6 +4,7 @@ const small_chair_1 = require("./small-chair");
 const medium_chair_1 = require("./medium-chair");
 const big_chair_1 = require("./big-chair");
 class ChairFactory {
+    // this is Factory method
     static getChair(chair) {
         if (chair == 'BigChair') {
             return new big_chair_1.default();

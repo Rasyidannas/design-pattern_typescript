@@ -24,6 +24,7 @@ class ConcreteProductC extends ConcreteProduct {
     }
 }
 class Creator {
+    // this is Factory method
     static createObject(someProperty) {
         if (someProperty === 'a') {
             return new ConcreteProductA();
