@@ -3,3 +3,4 @@ See this UML diagram of an Abstract Furniture Factory implementation that return
 ![The UML diagram for abstract factory](./abstract_furniture_factory.svg)
 
 # How to run this use case
+`node ./dist/src/abstract-factory/use-case/client.js`
