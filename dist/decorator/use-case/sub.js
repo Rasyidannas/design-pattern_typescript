@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = Sub;
 class _Sub {
     constructor(val1, val2) {
         const left = Object.prototype.hasOwnProperty.call(val1, 'value')
@@ -14,4 +15,3 @@ class _Sub {
 function Sub(val1, val2) {
     return new _Sub(val1, val2);
 }
-exports.default = Sub;
